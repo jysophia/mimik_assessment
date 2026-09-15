@@ -47,8 +47,8 @@ export function useChatModel() {
             // Split response on sentence boundaries or new lines to create chunked display
             const chunks = cleanedContent.match(/[^.!?\n]+[.!?\n]*/g) || [ cleanedContent ];
 
-            // Add the cleaned response as a new assistant message in the state
-            setMessages((prev) => [...prev, { role: "assistant", content: cleanedContent }]);
+            // Initialize an empty assistant message in the state
+            setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
 
             for (const chunk of chunks) {
                 // Stream the response in delayed chunks instead of character-by-character for better readability
