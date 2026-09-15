@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { ChatOpenAI } from "@langchain/openai";
 
+// Initialize the ChatOpenAI model using LangChain framework
+const model = new ChatOpenAI({
+    apiKey: import.meta.env.VITE_API_KEY,
+    configuration: {
+        baseURL: import.meta.env.VITE_API_BASE_URL,
+    },
+    model: import.meta.env.VITE_AI_MODEL
+});
+
 /**
  * Custom React hook to manage chat state and interactions with the AI model.
  * Provides functions to send messages, clear chat history, and handle loading/error states.
@@ -9,15 +18,6 @@ export function useChatModel() {
     const [messages, setMessages] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-
-    // Initialize the ChatOpenAI model using LangChain framework
-    const model = new ChatOpenAI({
-        apiKey: import.meta.env.VITE_API_KEY,
-        configuration: {
-            baseURL: import.meta.env.VITE_API_BASE_URL,
-        },
-        model: import.meta.env.VITE_AI_MODEL
-    });
 
     const sendMessage = async (userInput) => {
         if (!userInput.trim()) return;
