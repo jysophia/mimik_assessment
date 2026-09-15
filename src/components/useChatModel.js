@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { ChatOpenAI } from "@langchain/openai";
 
+/**
+ * Custom React hook to manage chat state and interactions with the AI model.
+ * Provides functions to send messages, clear chat history, and handle loading/error states.
+ * */
 export function useChatModel() {
     const [messages, setMessages] = useState([]);
     const [isLoading, setIsLoading] = useState(false);

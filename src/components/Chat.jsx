@@ -3,6 +3,10 @@ import { useChatModel } from "./useChatModel";
 import Markdown from "react-markdown";
 import "./Chat.css";
 
+/**
+ * Chat component that provides the UI for interacting with the AI chat bot.
+ * Manages user input, displays messages, and handles sending messages to the AI model.
+ */
 export default function Chat() {
     const [input, setInput] = useState("");
     const { messages, isLoading, error, sendMessage, clearMessages } = useChatModel();
