@@ -3,7 +3,7 @@
 A simple React chatbot that connects to a local AI model running on mimOE Studio.
 
 ### Overview
-This project was built as part of mimik's technical assesment. It uses LangChain to interface with the AI models served through a mimOE Studio endpoint, and displays the conversation in a clean React UI.
+This project was built as part of mimik's technical assesment. It uses LangChain to interface with the AI models served through a mimOE Studio endpoint, and displays the conversation in a simple React UI.
 
 **Key features**:
 - Real-time streaming responses
@@ -25,7 +25,10 @@ src/
         useChatModel.js # Highlight of this assessment - model integration and message processing
 ```
 
-### Getting Started
+### Demo
+Watch a short demo here: https://drive.google.com/file/d/1v-N5b597ntqUD8DgPUq1-5PmVxia4-g2/view?usp=sharing
+
+### Try it Yourself
 
 **Prerequisites**
 - Make sure you have Node.js v18+
