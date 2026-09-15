@@ -13,8 +13,15 @@ console.log("\nWelcome to the mimik Assessment Chatbot setup!\n");
 
 const endpoint = await ask("Enter your mimOE API endpoint: ");
 const apiKey = await ask("Enter your API key: ");
+const model = await ask("Enter the AI model to use: ");
 
-const env = `VITE_API_BASE_URL=${endpoint}\nVITE_API_KEY=${apiKey}\nVITE_AI_MODEL="qwen3-1.7b"\n`;
+if (!endpoint || !apiKey || !model) {
+  console.error("Error: All fields are required. Please provide the endpoint, API key, and model.");
+  rl.close();
+  process.exit(1);
+}
+
+const env = `VITE_API_BASE_URL=${endpoint}\nVITE_API_KEY=${apiKey}\nVITE_AI_MODEL="${model}"\n`;
 
 fs.writeFileSync(".env", env);
 

@@ -3,7 +3,7 @@
 A simple React chatbot that connects to a local AI model running on mimOE Studio.
 
 ### Overview
-This project was built as part of mimik's technical assesment. It uses LangChain to interface with the qwen3-1.7b model served through a mimOE Studio endpoint, and displays the conversation in a clean React UI.
+This project was built as part of mimik's technical assesment. It uses LangChain to interface with the AI models served through a mimOE Studio endpoint, and displays the conversation in a clean React UI.
 
 **Key features**:
 - Real-time streaming responses
@@ -14,7 +14,7 @@ This project was built as part of mimik's technical assesment. It uses LangChain
 - **React + Vite** - frontend framework and build tool
 - **LangChain** (`@langchain/openai`) - model integration via OpenAI-compatible API
 - **Express** - lightweight local server
-- **mimOE Studio** - local AI runtime serving the qwen3-1.7b model
+- **mimOE Studio** - local AI runtime serving the model of your choice
 
 ### Project Structure
 ```
@@ -29,15 +29,15 @@ src/
 
 **Prerequisites**
 - Make sure you have Node.js v18+
-- Run mimOE Studio locally with the qwen3-1.7b model loaded
+- Run mimOE Studio locally with a model loaded
 
 **Installation**
 ```
-git clone <repo-url>
-cd mimik-assessment
+git clone https://github.com/jysophia/mimik_assessment.git
+cd mimik_assessment
 npm install
 npm run setup
 npm run dev
 ```
 
-`npm run setup` will prompt you for your mimOE endpoint and API key, and create the `.env` file automatically. Once done and you've run `npm run dev`, open your browser at the localhost environment shown in the terminal.
+`npm run setup` will prompt you for your mimOE endpoint, API key, and model, and then create the `.env` file automatically. Once done and you've run `npm run dev`, open your browser at the localhost environment shown in the terminal.
