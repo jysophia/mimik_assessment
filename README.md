@@ -13,7 +13,6 @@ This project was built as part of mimik's technical assesment. It uses LangChain
 ### Tech Stack
 - **React + Vite** - frontend framework and build tool
 - **LangChain** (`@langchain/openai`) - model integration via OpenAI-compatible API
-- **Express** - lightweight local server
 - **mimOE Studio** - local AI runtime serving the model of your choice
 
 ### Project Structure
